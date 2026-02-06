@@ -1,0 +1,17 @@
+{
+	"name": "managertrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/csvfiles/Fact_Sales_1.csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/9f275cba-4d7a-4c7e-af98-8dba8ee15d94/resourceGroups/azurefundamentals/providers/Microsoft.Storage/storageAccounts/storagedatafactorypav",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
