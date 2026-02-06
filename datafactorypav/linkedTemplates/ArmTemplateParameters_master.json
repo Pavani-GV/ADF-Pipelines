@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactorypav"
+		},
+		"linkservicedl_accountKey": {
+			"value": ""
+		},
+		"linkgit_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"linkservicedl_properties_typeProperties_url": {
+			"value": "https://storagedatafactorypav.dfs.core.windows.net/"
+		},
+		"managertrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/9f275cba-4d7a-4c7e-af98-8dba8ee15d94/resourceGroups/azurefundamentals/providers/Microsoft.Storage/storageAccounts/storagedatafactorypav"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/9f275cba-4d7a-4c7e-af98-8dba8ee15d94/resourceGroups/azurefundamentals/providers/Microsoft.Storage/storageAccounts/storagedatafactorypav"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
