@@ -8,11 +8,20 @@
 		"linkservicedl_accountKey": {
 			"value": ""
 		},
+		"ls_onprime_source_password": {
+			"value": ""
+		},
 		"linkgit_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com"
 		},
 		"linkservicedl_properties_typeProperties_url": {
 			"value": "https://storagedatafactorypav.dfs.core.windows.net/"
+		},
+		"ls_onprime_source_properties_typeProperties_host": {
+			"value": "C:\\pavanifiles"
+		},
+		"ls_onprime_source_properties_typeProperties_userId": {
+			"value": "MIS"
 		},
 		"managertrigger_properties_typeProperties_scope": {
 			"value": "/subscriptions/9f275cba-4d7a-4c7e-af98-8dba8ee15d94/resourceGroups/azurefundamentals/providers/Microsoft.Storage/storageAccounts/storagedatafactorypav"

@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'linkservicedl'"
 		},
+		"ls_onprime_source_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_onprime_source'"
+		},
 		"linkgit_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com"
@@ -18,6 +22,14 @@
 		"linkservicedl_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storagedatafactorypav.dfs.core.windows.net/"
+		},
+		"ls_onprime_source_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\pavanifiles"
+		},
+		"ls_onprime_source_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "MIS"
 		},
 		"managertrigger_properties_typeProperties_scope": {
 			"type": "string",
@@ -57,6 +69,9 @@
 					"linkservicedl_accountKey": {
 						"value": "[parameters('linkservicedl_accountKey')]"
 					},
+					"ls_onprime_source_password": {
+						"value": "[parameters('ls_onprime_source_password')]"
+					},
 					"linkgit_properties_typeProperties_url": {
 						"value": "[parameters('linkgit_properties_typeProperties_url')]"
 					},
@@ -66,12 +81,38 @@
 					"managertrigger_properties_typeProperties_scope": {
 						"value": "[parameters('managertrigger_properties_typeProperties_scope')]"
 					},
+					"ls_onprime_source_properties_typeProperties_host": {
+						"value": "[parameters('ls_onprime_source_properties_typeProperties_host')]"
+					},
+					"ls_onprime_source_properties_typeProperties_userId": {
+						"value": "[parameters('ls_onprime_source_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "datafactorypav_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
 					"trigger1_properties_typeProperties_scope": {
 						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'datafactorypav_ArmTemplate_0')]"
+			]
 		}
 	]
 }
