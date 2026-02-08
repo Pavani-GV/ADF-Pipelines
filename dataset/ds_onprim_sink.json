@@ -2,7 +2,7 @@
 	"name": "ds_onprim_sink",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_datalake",
+			"referenceName": "linkservicedl",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
