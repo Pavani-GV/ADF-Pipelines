@@ -195,12 +195,20 @@
 					"referenceName": "linkservicedl",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"p_filename": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "firstcopy.csv",
+						"fileName": {
+							"value": "@dataset().p_filename",
+							"type": "Expression"
+						},
 						"folderPath": "onprime",
 						"fileSystem": "bronze"
 					},
@@ -700,12 +708,20 @@
 					"referenceName": "ls_onprime_source",
 					"type": "LinkedServiceReference"
 				},
+				"parameters": {
+					"p_filename": {
+						"type": "string"
+					}
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
 					"location": {
 						"type": "FileServerLocation",
-						"fileName": "DimAirline.csv"
+						"fileName": {
+							"value": "@dataset().p_filename",
+							"type": "Expression"
+						}
 					},
 					"columnDelimiter": ",",
 					"escapeChar": "\\",
