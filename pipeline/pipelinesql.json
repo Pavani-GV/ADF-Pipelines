@@ -30,12 +30,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"additionalColumns": [
-							{
-								"name": "",
-								"value": ""
-							}
-						],
 						"sqlReaderQuery": {
 							"value": "select * from dbo.FactBookings\nwhere  booking_date > '@{activity('lastload').output.firstRow.lastload}'\nand booking_date <= '@{activity('latestload').output.firstRow.latestload}'",
 							"type": "Expression"
