@@ -11,6 +11,9 @@
 		"ls_onprime_source_password": {
 			"value": ""
 		},
+		"ls_sql_password": {
+			"value": ""
+		},
 		"linkgit_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com"
 		},
@@ -22,6 +25,15 @@
 		},
 		"ls_onprime_source_properties_typeProperties_userId": {
 			"value": "MIS"
+		},
+		"ls_sql_properties_typeProperties_server": {
+			"value": "azuresqlserverpav.database.windows.net"
+		},
+		"ls_sql_properties_typeProperties_database": {
+			"value": "azuresqlpav"
+		},
+		"ls_sql_properties_typeProperties_userName": {
+			"value": "admin123"
 		},
 		"managertrigger_properties_typeProperties_scope": {
 			"value": "/subscriptions/9f275cba-4d7a-4c7e-af98-8dba8ee15d94/resourceGroups/azurefundamentals/providers/Microsoft.Storage/storageAccounts/storagedatafactorypav"
